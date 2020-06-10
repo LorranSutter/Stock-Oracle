@@ -1,0 +1,1824 @@
+{
+  "contractName": "Stock",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "symbol",
+          "type": "bytes4"
+        },
+        {
+          "internalType": "uint256",
+          "name": "price",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "volume",
+          "type": "uint256"
+        }
+      ],
+      "name": "setStock",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "symbol",
+          "type": "bytes4"
+        }
+      ],
+      "name": "getStockPrice",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "symbol",
+          "type": "bytes4"
+        }
+      ],
+      "name": "getStockVolume",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"symbol\",\"type\":\"bytes4\"}],\"name\":\"getStockPrice\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"symbol\",\"type\":\"bytes4\"}],\"name\":\"getStockVolume\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"symbol\",\"type\":\"bytes4\"},{\"internalType\":\"uint256\",\"name\":\"price\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"volume\",\"type\":\"uint256\"}],\"name\":\"setStock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Stock-Oracle/SmartContract/contracts/Stock.sol\":\"Stock\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Stock-Oracle/SmartContract/contracts/Stock.sol\":{\"keccak256\":\"0x8eeed4e3a67ce9cbd0066a4aee0b778e5642221adfead1e2712c47deec7da84c\",\"urls\":[\"bzz-raw://7ffb49bb66a2de0e4a8adb81c6bae398ddb7e29e5b7feb8c7f602699467ad081\",\"dweb:/ipfs/Qma12nS6o9qo5u4KM1HDuy8y7m6Rru8i9bEiVUdR8K7SJy\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5033600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506102ff806100616000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c80630b1dc17c146100465780638604e3db146100a7578063945aaa4414610108575b600080fd5b6100916004803603602081101561005c57600080fd5b8101908080357bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19169060200190929190505050610169565b6040518082815260200191505060405180910390f35b6100f2600480360360208110156100bd57600080fd5b8101908080357bffffffffffffffffffffffffffffffffffffffffffffffffffffffff191690602001909291905050506101c6565b6040518082815260200191505060405180910390f35b6101676004803603606081101561011e57600080fd5b8101908080357bffffffffffffffffffffffffffffffffffffffffffffffffffffffff191690602001909291908035906020019092919080359060200190929190505050610223565b005b6000806000837bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19168152602001908152602001600020600101549050919050565b6000806000837bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19168152602001908152602001600020600001549050919050565b61022b6102b0565b604051806040016040528084815260200183815250905080600080867bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19168152602001908152602001600020600082015181600001556020820151816001015590505050505050565b60405180604001604052806000815260200160008152509056fea265627a7a723158204736dc6f969f537ba69021c1faab0ddeed17643cd539415ebf777ed88ad28b2264736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c80630b1dc17c146100465780638604e3db146100a7578063945aaa4414610108575b600080fd5b6100916004803603602081101561005c57600080fd5b8101908080357bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19169060200190929190505050610169565b6040518082815260200191505060405180910390f35b6100f2600480360360208110156100bd57600080fd5b8101908080357bffffffffffffffffffffffffffffffffffffffffffffffffffffffff191690602001909291905050506101c6565b6040518082815260200191505060405180910390f35b6101676004803603606081101561011e57600080fd5b8101908080357bffffffffffffffffffffffffffffffffffffffffffffffffffffffff191690602001909291908035906020019092919080359060200190929190505050610223565b005b6000806000837bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19168152602001908152602001600020600101549050919050565b6000806000837bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19168152602001908152602001600020600001549050919050565b61022b6102b0565b604051806040016040528084815260200183815250905080600080867bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19167bffffffffffffffffffffffffffffffffffffffffffffffffffffffff19168152602001908152602001600020600082015181600001556020820151816001015590505050505050565b60405180604001604052806000815260200160008152509056fea265627a7a723158204736dc6f969f537ba69021c1faab0ddeed17643cd539415ebf777ed88ad28b2264736f6c63430005100032",
+  "sourceMap": "71:725:1:-;;;251:64;8:9:-1;5:2;;;30:1;27;20:12;5:2;251:64:1;297:10;283:11;;:24;;;;;;;;;;;;;;;;;;71:725;;;;;;",
+  "deployedSourceMap": "71:725:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;71:725:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;673:120;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;673:120:1;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;547:118;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;547:118:1;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;323:216;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;323:216:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;673:120;733:7;760:10;:18;771:6;760:18;;;;;;;;;;;;;;;;;:25;;;753:32;;673:120;;;:::o;547:118::-;606:7;633:10;:18;644:6;633:18;;;;;;;;;;;;;;;;;:24;;;626:31;;547:118;;;:::o;323:216::-;439:25;;:::i;:::-;467:24;;;;;;;;477:5;467:24;;;;484:6;467:24;;;439:52;;523:8;502:10;:18;513:6;502:18;;;;;;;;;;;;;;;;;:29;;;;;;;;;;;;;;;;;;;323:216;;;;:::o;71:725::-;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "// SPDX-License-Identifier: MIT\r\n\r\npragma solidity >=0.4.21 <0.7.0;\r\n\r\ncontract Stock {\r\n    struct StockInfo {\r\n        uint256 price;\r\n        uint256 volume;\r\n    }\r\n\r\n    mapping(bytes4 => StockInfo) stockQuote;\r\n\r\n    address oracleOwner;\r\n\r\n    constructor() public {\r\n        oracleOwner = msg.sender;\r\n    }\r\n\r\n    function setStock(\r\n        bytes4 symbol,\r\n        uint256 price,\r\n        uint256 volume\r\n    ) public {\r\n        StockInfo memory newStock = StockInfo(price, volume);\r\n        stockQuote[symbol] = newStock;\r\n    }\r\n\r\n    function getStockPrice(bytes4 symbol) public view returns (uint256) {\r\n        return stockQuote[symbol].price;\r\n    }\r\n\r\n    function getStockVolume(bytes4 symbol) public view returns (uint256) {\r\n        return stockQuote[symbol].volume;\r\n    }\r\n}\r\n",
+  "sourcePath": "C:\\Stock-Oracle\\SmartContract\\contracts\\Stock.sol",
+  "ast": {
+    "absolutePath": "/C/Stock-Oracle/SmartContract/contracts/Stock.sol",
+    "exportedSymbols": {
+      "Stock": [
+        108
+      ]
+    },
+    "id": 109,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 38,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:32:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 108,
+        "linearizedBaseContracts": [
+          108
+        ],
+        "name": "Stock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Stock.StockInfo",
+            "id": 43,
+            "members": [
+              {
+                "constant": false,
+                "id": 40,
+                "name": "price",
+                "nodeType": "VariableDeclaration",
+                "scope": 43,
+                "src": "121:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 39,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "121:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 42,
+                "name": "volume",
+                "nodeType": "VariableDeclaration",
+                "scope": 43,
+                "src": "145:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 41,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "145:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "StockInfo",
+            "nodeType": "StructDefinition",
+            "scope": 108,
+            "src": "93:74:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 47,
+            "name": "stockQuote",
+            "nodeType": "VariableDeclaration",
+            "scope": 108,
+            "src": "175:39:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes4_$_t_struct$_StockInfo_$43_storage_$",
+              "typeString": "mapping(bytes4 => struct Stock.StockInfo)"
+            },
+            "typeName": {
+              "id": 46,
+              "keyType": {
+                "id": 44,
+                "name": "bytes4",
+                "nodeType": "ElementaryTypeName",
+                "src": "183:6:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes4",
+                  "typeString": "bytes4"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "175:28:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes4_$_t_struct$_StockInfo_$43_storage_$",
+                "typeString": "mapping(bytes4 => struct Stock.StockInfo)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 45,
+                "name": "StockInfo",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 43,
+                "src": "193:9:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_StockInfo_$43_storage_ptr",
+                  "typeString": "struct Stock.StockInfo"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49,
+            "name": "oracleOwner",
+            "nodeType": "VariableDeclaration",
+            "scope": 108,
+            "src": "223:19:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 48,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "223:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 57,
+              "nodeType": "Block",
+              "src": "272:43:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 55,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 52,
+                      "name": "oracleOwner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 49,
+                      "src": "283:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 53,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 123,
+                        "src": "297:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 54,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "297:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "283:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 56,
+                  "nodeType": "ExpressionStatement",
+                  "src": "283:24:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 58,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 50,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "262:2:1"
+            },
+            "returnParameters": {
+              "id": 51,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "272:0:1"
+            },
+            "scope": 108,
+            "src": "251:64:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 80,
+              "nodeType": "Block",
+              "src": "428:111:1",
+              "statements": [
+                {
+                  "assignments": [
+                    68
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 68,
+                      "name": "newStock",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 80,
+                      "src": "439:25:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_StockInfo_$43_memory_ptr",
+                        "typeString": "struct Stock.StockInfo"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 67,
+                        "name": "StockInfo",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 43,
+                        "src": "439:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_StockInfo_$43_storage_ptr",
+                          "typeString": "struct Stock.StockInfo"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 73,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 70,
+                        "name": "price",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 62,
+                        "src": "477:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 71,
+                        "name": "volume",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 64,
+                        "src": "484:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 69,
+                      "name": "StockInfo",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 43,
+                      "src": "467:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_StockInfo_$43_storage_ptr_$",
+                        "typeString": "type(struct Stock.StockInfo storage pointer)"
+                      }
+                    },
+                    "id": 72,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "467:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_StockInfo_$43_memory",
+                      "typeString": "struct Stock.StockInfo memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "439:52:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 78,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 74,
+                        "name": "stockQuote",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47,
+                        "src": "502:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes4_$_t_struct$_StockInfo_$43_storage_$",
+                          "typeString": "mapping(bytes4 => struct Stock.StockInfo storage ref)"
+                        }
+                      },
+                      "id": 76,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 75,
+                        "name": "symbol",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60,
+                        "src": "513:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "502:18:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_StockInfo_$43_storage",
+                        "typeString": "struct Stock.StockInfo storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 77,
+                      "name": "newStock",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 68,
+                      "src": "523:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_StockInfo_$43_memory_ptr",
+                        "typeString": "struct Stock.StockInfo memory"
+                      }
+                    },
+                    "src": "502:29:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_StockInfo_$43_storage",
+                      "typeString": "struct Stock.StockInfo storage ref"
+                    }
+                  },
+                  "id": 79,
+                  "nodeType": "ExpressionStatement",
+                  "src": "502:29:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 81,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setStock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 65,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60,
+                  "name": "symbol",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 81,
+                  "src": "351:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 59,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "351:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62,
+                  "name": "price",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 81,
+                  "src": "375:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 61,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "375:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 64,
+                  "name": "volume",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 81,
+                  "src": "399:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 63,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "399:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "340:80:1"
+            },
+            "returnParameters": {
+              "id": 66,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "428:0:1"
+            },
+            "scope": 108,
+            "src": "323:216:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 93,
+              "nodeType": "Block",
+              "src": "615:50:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 88,
+                        "name": "stockQuote",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47,
+                        "src": "633:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes4_$_t_struct$_StockInfo_$43_storage_$",
+                          "typeString": "mapping(bytes4 => struct Stock.StockInfo storage ref)"
+                        }
+                      },
+                      "id": 90,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 89,
+                        "name": "symbol",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 83,
+                        "src": "644:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "633:18:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_StockInfo_$43_storage",
+                        "typeString": "struct Stock.StockInfo storage ref"
+                      }
+                    },
+                    "id": 91,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "price",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 40,
+                    "src": "633:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 87,
+                  "id": 92,
+                  "nodeType": "Return",
+                  "src": "626:31:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 94,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getStockPrice",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 84,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 83,
+                  "name": "symbol",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 94,
+                  "src": "570:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 82,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "570:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "569:15:1"
+            },
+            "returnParameters": {
+              "id": 87,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 86,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 94,
+                  "src": "606:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 85,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "606:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "605:9:1"
+            },
+            "scope": 108,
+            "src": "547:118:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 106,
+              "nodeType": "Block",
+              "src": "742:51:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 101,
+                        "name": "stockQuote",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47,
+                        "src": "760:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes4_$_t_struct$_StockInfo_$43_storage_$",
+                          "typeString": "mapping(bytes4 => struct Stock.StockInfo storage ref)"
+                        }
+                      },
+                      "id": 103,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 102,
+                        "name": "symbol",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 96,
+                        "src": "771:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "760:18:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_StockInfo_$43_storage",
+                        "typeString": "struct Stock.StockInfo storage ref"
+                      }
+                    },
+                    "id": 104,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "volume",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 42,
+                    "src": "760:25:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 100,
+                  "id": 105,
+                  "nodeType": "Return",
+                  "src": "753:32:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 107,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getStockVolume",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 97,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 96,
+                  "name": "symbol",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 107,
+                  "src": "697:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 95,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "697:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "696:15:1"
+            },
+            "returnParameters": {
+              "id": 100,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 99,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 107,
+                  "src": "733:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 98,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "733:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "732:9:1"
+            },
+            "scope": 108,
+            "src": "673:120:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 109,
+        "src": "71:725:1"
+      }
+    ],
+    "src": "35:763:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Stock-Oracle/SmartContract/contracts/Stock.sol",
+    "exportedSymbols": {
+      "Stock": [
+        108
+      ]
+    },
+    "id": 109,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 38,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "35:32:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 108,
+        "linearizedBaseContracts": [
+          108
+        ],
+        "name": "Stock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Stock.StockInfo",
+            "id": 43,
+            "members": [
+              {
+                "constant": false,
+                "id": 40,
+                "name": "price",
+                "nodeType": "VariableDeclaration",
+                "scope": 43,
+                "src": "121:13:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 39,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "121:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 42,
+                "name": "volume",
+                "nodeType": "VariableDeclaration",
+                "scope": 43,
+                "src": "145:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 41,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "145:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "StockInfo",
+            "nodeType": "StructDefinition",
+            "scope": 108,
+            "src": "93:74:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 47,
+            "name": "stockQuote",
+            "nodeType": "VariableDeclaration",
+            "scope": 108,
+            "src": "175:39:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes4_$_t_struct$_StockInfo_$43_storage_$",
+              "typeString": "mapping(bytes4 => struct Stock.StockInfo)"
+            },
+            "typeName": {
+              "id": 46,
+              "keyType": {
+                "id": 44,
+                "name": "bytes4",
+                "nodeType": "ElementaryTypeName",
+                "src": "183:6:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes4",
+                  "typeString": "bytes4"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "175:28:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes4_$_t_struct$_StockInfo_$43_storage_$",
+                "typeString": "mapping(bytes4 => struct Stock.StockInfo)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 45,
+                "name": "StockInfo",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 43,
+                "src": "193:9:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_StockInfo_$43_storage_ptr",
+                  "typeString": "struct Stock.StockInfo"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 49,
+            "name": "oracleOwner",
+            "nodeType": "VariableDeclaration",
+            "scope": 108,
+            "src": "223:19:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 48,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "223:7:1",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 57,
+              "nodeType": "Block",
+              "src": "272:43:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 55,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 52,
+                      "name": "oracleOwner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 49,
+                      "src": "283:11:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 53,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 123,
+                        "src": "297:3:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 54,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "297:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "283:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 56,
+                  "nodeType": "ExpressionStatement",
+                  "src": "283:24:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 58,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 50,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "262:2:1"
+            },
+            "returnParameters": {
+              "id": 51,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "272:0:1"
+            },
+            "scope": 108,
+            "src": "251:64:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 80,
+              "nodeType": "Block",
+              "src": "428:111:1",
+              "statements": [
+                {
+                  "assignments": [
+                    68
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 68,
+                      "name": "newStock",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 80,
+                      "src": "439:25:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_StockInfo_$43_memory_ptr",
+                        "typeString": "struct Stock.StockInfo"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 67,
+                        "name": "StockInfo",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 43,
+                        "src": "439:9:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_StockInfo_$43_storage_ptr",
+                          "typeString": "struct Stock.StockInfo"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 73,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 70,
+                        "name": "price",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 62,
+                        "src": "477:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 71,
+                        "name": "volume",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 64,
+                        "src": "484:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 69,
+                      "name": "StockInfo",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 43,
+                      "src": "467:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_StockInfo_$43_storage_ptr_$",
+                        "typeString": "type(struct Stock.StockInfo storage pointer)"
+                      }
+                    },
+                    "id": 72,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "467:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_StockInfo_$43_memory",
+                      "typeString": "struct Stock.StockInfo memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "439:52:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 78,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 74,
+                        "name": "stockQuote",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47,
+                        "src": "502:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes4_$_t_struct$_StockInfo_$43_storage_$",
+                          "typeString": "mapping(bytes4 => struct Stock.StockInfo storage ref)"
+                        }
+                      },
+                      "id": 76,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 75,
+                        "name": "symbol",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 60,
+                        "src": "513:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "502:18:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_StockInfo_$43_storage",
+                        "typeString": "struct Stock.StockInfo storage ref"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 77,
+                      "name": "newStock",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 68,
+                      "src": "523:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_StockInfo_$43_memory_ptr",
+                        "typeString": "struct Stock.StockInfo memory"
+                      }
+                    },
+                    "src": "502:29:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_StockInfo_$43_storage",
+                      "typeString": "struct Stock.StockInfo storage ref"
+                    }
+                  },
+                  "id": 79,
+                  "nodeType": "ExpressionStatement",
+                  "src": "502:29:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 81,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setStock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 65,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 60,
+                  "name": "symbol",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 81,
+                  "src": "351:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 59,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "351:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 62,
+                  "name": "price",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 81,
+                  "src": "375:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 61,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "375:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 64,
+                  "name": "volume",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 81,
+                  "src": "399:14:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 63,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "399:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "340:80:1"
+            },
+            "returnParameters": {
+              "id": 66,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "428:0:1"
+            },
+            "scope": 108,
+            "src": "323:216:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 93,
+              "nodeType": "Block",
+              "src": "615:50:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 88,
+                        "name": "stockQuote",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47,
+                        "src": "633:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes4_$_t_struct$_StockInfo_$43_storage_$",
+                          "typeString": "mapping(bytes4 => struct Stock.StockInfo storage ref)"
+                        }
+                      },
+                      "id": 90,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 89,
+                        "name": "symbol",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 83,
+                        "src": "644:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "633:18:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_StockInfo_$43_storage",
+                        "typeString": "struct Stock.StockInfo storage ref"
+                      }
+                    },
+                    "id": 91,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "price",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 40,
+                    "src": "633:24:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 87,
+                  "id": 92,
+                  "nodeType": "Return",
+                  "src": "626:31:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 94,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getStockPrice",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 84,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 83,
+                  "name": "symbol",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 94,
+                  "src": "570:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 82,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "570:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "569:15:1"
+            },
+            "returnParameters": {
+              "id": 87,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 86,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 94,
+                  "src": "606:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 85,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "606:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "605:9:1"
+            },
+            "scope": 108,
+            "src": "547:118:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 106,
+              "nodeType": "Block",
+              "src": "742:51:1",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 101,
+                        "name": "stockQuote",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47,
+                        "src": "760:10:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes4_$_t_struct$_StockInfo_$43_storage_$",
+                          "typeString": "mapping(bytes4 => struct Stock.StockInfo storage ref)"
+                        }
+                      },
+                      "id": 103,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 102,
+                        "name": "symbol",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 96,
+                        "src": "771:6:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "760:18:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_StockInfo_$43_storage",
+                        "typeString": "struct Stock.StockInfo storage ref"
+                      }
+                    },
+                    "id": 104,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "volume",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 42,
+                    "src": "760:25:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 100,
+                  "id": 105,
+                  "nodeType": "Return",
+                  "src": "753:32:1"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 107,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getStockVolume",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 97,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 96,
+                  "name": "symbol",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 107,
+                  "src": "697:13:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 95,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "697:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "696:15:1"
+            },
+            "returnParameters": {
+              "id": 100,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 99,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 107,
+                  "src": "733:7:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 98,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "733:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "732:9:1"
+            },
+            "scope": 108,
+            "src": "673:120:1",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 109,
+        "src": "71:725:1"
+      }
+    ],
+    "src": "35:763:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.2.0",
+  "updatedAt": "2020-06-10T23:36:07.238Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
