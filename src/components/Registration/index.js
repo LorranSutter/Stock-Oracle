@@ -17,6 +17,12 @@ const Registration = () => {
             axios
                 .get(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=KEY`)
                 .then(res => {
+                    if (!res.data['Global Quote']) {
+                        setSymbol(() => '');
+                        setIsLoading(isLoading => !isLoading);
+                        setDisplay(`${symbol} symbol is not valid`);
+                        return;
+                    }
                     const price = parseInt(res.data['Global Quote']['05. price']);
                     const volume = parseInt(res.data['Global Quote']['06. volume']);
                     web3Oracle
@@ -24,7 +30,7 @@ const Registration = () => {
                         .then(() => {
                             setSymbol(() => '');
                             setIsLoading(isLoading => !isLoading);
-                            setDisplay(`Stock ${symbol} added successfully`)
+                            setDisplay(`Stock ${symbol} added successfully`);
                         })
                         .catch(err => {
                             setIsLoading(isLoading => !isLoading);
