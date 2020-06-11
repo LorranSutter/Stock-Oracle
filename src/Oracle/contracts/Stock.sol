@@ -12,6 +12,14 @@ contract Stock {
 
     address oracleOwner;
 
+    modifier onlyOwner() {
+        require(
+            msg.sender == oracleOwner,
+            "Only owner can execute this action"
+        );
+        _;
+    }
+
     constructor() public {
         oracleOwner = msg.sender;
     }
@@ -20,7 +28,7 @@ contract Stock {
         bytes4 symbol,
         uint256 price,
         uint256 volume
-    ) public {
+    ) public onlyOwner {
         StockInfo memory newStock = StockInfo(price, volume);
         stockQuote[symbol] = newStock;
     }
