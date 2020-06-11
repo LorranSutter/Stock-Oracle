@@ -3,7 +3,7 @@
 Oracle implementation using Solidity, Truffle and API of stock market info presented as lab assingment for BCDV1011 - Design Patterns for Blockchain from <a href='https://www.georgebrown.ca/programs/blockchain-development-program-t175/'>Blockchain Development</a> program from <a href='https://www.georgebrown.ca'>George Brown College</a>.
 
 <p align='center'>
-<img src='https://res.cloudinary.com/lorransutter/image/upload/v1591890398/Stock_Oracle.gif'/>
+<img src='https://res.cloudinary.com/lorransutter/image/upload/v1591890398/Stock_Oracle.gif' height=300/>
 </p>
 
 <!-- ## :hospital: Description
