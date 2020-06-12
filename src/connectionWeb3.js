@@ -11,7 +11,7 @@ let stockQuote;
     stockQuote = new web3.eth.Contract(STOCK_ORACLE_ABI, STOCK_ORACLE_ADDRESS);
 })();
 
-const web3Oracle = {
+const connectionWeb3 = {
 
     async setStock(symbol, price, volume) {
         const accounts = await web3.eth.getAccounts();
@@ -33,4 +33,4 @@ const web3Oracle = {
     }
 }
 
-export default web3Oracle;
+export default connectionWeb3;

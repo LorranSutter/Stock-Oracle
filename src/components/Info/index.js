@@ -1,7 +1,7 @@
 import React, { useState, useCallback } from 'react';
 import { Layout, Card, Form, FormLayout, TextField, ButtonGroup, Button, DisplayText } from '@shopify/polaris';
 
-import web3Oracle from '../../web3Oracle';
+import connectionWeb3 from '../../connectionWeb3';
 
 const Info = () => {
 
@@ -12,7 +12,7 @@ const Info = () => {
     function handleSubmitPrice() {
         setIsLoading(isLoading => !isLoading);
         try {
-            web3Oracle
+            connectionWeb3
                 .getStockPrice(symbol)
                 .then((price) => {
                     setIsLoading(isLoading => !isLoading);
@@ -31,7 +31,7 @@ const Info = () => {
     function handleSubmitVolume() {
         setIsLoading(isLoading => !isLoading);
         try {
-            web3Oracle
+            connectionWeb3
                 .getStockVolume(symbol)
                 .then((volume) => {
                     setIsLoading(isLoading => !isLoading);

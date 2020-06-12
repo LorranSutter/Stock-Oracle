@@ -3,7 +3,7 @@ import { Layout, Card, Form, FormLayout, TextField, Button, DisplayText } from '
 
 import axios from 'axios';
 
-import web3Oracle from '../../web3Oracle';
+import connectionWeb3 from '../../connectionWeb3';
 
 const Registration = () => {
 
@@ -25,7 +25,7 @@ const Registration = () => {
                     }
                     const price = parseInt(res.data['Global Quote']['05. price']);
                     const volume = parseInt(res.data['Global Quote']['06. volume']);
-                    web3Oracle
+                    connectionWeb3
                         .setStock(symbol, price, volume)
                         .then(() => {
                             setSymbol(() => '');
