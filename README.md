@@ -67,7 +67,7 @@ yarn start
 ## :book: References
 
 - [Alpha Vantage](https://www.alphavantage.co/) - stock API
-- [web3 calls](https://bitsofco.de/calling-smart-contract-functions-using-web3-js-call-vs-send/)
+- [Web3 calls](https://bitsofco.de/calling-smart-contract-functions-using-web3-js-call-vs-send/) - understanding web3.js calls
 
 ## :computer: Technologies
 
