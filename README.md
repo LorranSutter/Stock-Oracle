@@ -33,7 +33,7 @@ cd Stock-Oracle
 yarn
 ```
 
-Now you will need two opened terminals to run the project. One for the truffle to simulate the EVM and another one for the frontend.
+Now you will need two opened terminals to run the project. One for truffle to simulate the EVM and another one for the frontend.
 
 Truffle will run on http://127.0.0.1:9545/
 
